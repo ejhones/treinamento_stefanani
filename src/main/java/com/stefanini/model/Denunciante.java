@@ -1,15 +1,12 @@
 package com.stefanini.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Collection;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 @Entity
 public class Denunciante implements Serializable {
@@ -29,8 +26,8 @@ public class Denunciante implements Serializable {
     @Column(length = 10, nullable = false)
     private String telefone;
 
-    @OneToMany(mappedBy="denunciante")
-    private Collection<Denuncia> denuncias = new ArrayList<Denuncia>();
+//    @OneToMany(mappedBy="denunciante")
+//    private Collection<Denuncia> denuncias = new ArrayList<Denuncia>();
 
     public Integer getId() {
         return id;
