@@ -30,7 +30,7 @@ public class AgenteBean implements Serializable {
 	}
 
 	public String chamar() {
-		System.out.println("nome: "+this.agente.getNome());
+		agenteService.incluir(this.agente);
         return "agente.xhtml";
     }
 

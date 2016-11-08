@@ -8,13 +8,21 @@
 </h:head>
 <h:body>
 	<h:form>
-    	<input id="" type="text" value="#{agenteMB.agente.nome}" placeholder="Nome" /><br />
-    	
-        <p:calendar value="#{agenteMB.agente.dtContratacao}"/><br />
-	
-    	<input id="" type="text"  value="#{agenteMB.agente.tempoServico}" placeholder="Tempo de Serviço"/><br />
-    	
-        <p:commandButton value="Chamar" action="#{agenteMB.chamar()}"></p:commandButton>
+		<p:panel id="panel" header="Cadastro" style="margin-bottom:10px;">
+        <p:messages id="messages" />
+        <h:panelGrid columns="2" cellpadding="5">
+            <h:outputLabel for="name" value="Nome: " />
+            <p:inputText id="name" required="true" value="#{agenteMB.agente.nome}" />
+ 
+            <p:outputLabel for="extended" value="Data Contratação: " />
+            <p:calendar id="extended" value="#{agenteMB.agente.dtContratacao}" required="true"/>
+ 
+            <p:outputLabel for="number" value="Tempo de Serviço: " />
+            <p:spinner id="number" required="true" value="#{agenteMB.agente.tempoServico}"/>
+            
+        </h:panelGrid>
+    	</p:panel>
+ 		<p:commandButton value="Chamar" action="#{agenteMB.chamar()}"/>
     </h:form>
 </h:body>
 </html>

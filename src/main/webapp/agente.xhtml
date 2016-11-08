@@ -8,7 +8,9 @@
 </h:head>
 <h:body>
     <h:form>
-   		oi
+   		Ola <h:outputLabel for="" value="#{agenteMB.agente.nome}" /><br />
+   		Data de admissão <p:calendar id="extended" value="#{agenteMB.agente.dtContratacao}" /><br />
+   		Tempo de serviço: <h:outputLabel for="" value="#{agenteMB.agente.tempoServico}" />
     </h:form>
 </h:body>
 </html>
