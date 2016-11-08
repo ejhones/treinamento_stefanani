@@ -10,6 +10,8 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class TelefonesId implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	private int numero;
 	private int ddd;
 	private int cpfProprietario;

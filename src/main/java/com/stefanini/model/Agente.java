@@ -22,6 +22,7 @@ public class Agente implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
+	private Integer cpfAgente;
 	private Integer idAgente;
 	private String nome;
 	private Date dtContratacao;
@@ -74,6 +75,14 @@ public class Agente implements Serializable {
 
 	public void setTempoServico(Integer tempoServico) {
 		this.tempoServico = tempoServico;
+	}
+	
+	public Integer getCpfAgente() {
+		return cpfAgente;
+	}
+
+	public void setCpfAgente(Integer cpfAgente) {
+		this.cpfAgente = cpfAgente;
 	}
 
 }

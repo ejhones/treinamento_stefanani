@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
+    
+    <ui:composition template="_template.xhtml">
+	
+		<ui:define name="titulo">
+			<p:outputPanel>Gerenciar Proprietário</p:outputPanel>
+		</ui:define>
+
+		<ui:define name="conteudo">
+			<h:form>
+				<p:messages id="messages" />
+
+				<p:fieldset legend="Dados do Proprietário">
+					<p:panelGrid columns="2">
+						<p:outputLabel value="Nome:" for="nome" />
+						<p:inputText id="nome" value=""
+							required="true" requiredMessage="Nome é obrigatório"
+							validatorMessage="Campo não pode ser nulo">
+							<f:ajax event="blur" render="messages" />
+						</p:inputText>
+
+						<p:outputLabel value="Endereço: " for="endereco" />
+						<p:inputMask id="endereco" value="" required="true"/>
+						
+						<p:outputLabel value="Bairro: " for="bairro" />
+						<p:inputMask id="bairro" value="" required="true"/>
+						
+						<p:outputLabel value="Cidade: " for="cidade" />
+						<p:inputMask id="cidade" value="" required="true"/>
+						
+						<p:outputLabel value="UF: " for="uf" />
+						<p:inputMask id="uf" value="" required="true"/>
+
+						<p:outputLabel value="Data de Nascimeto: " for="dtNascimento" />
+						<p:inputMask id="dtNascimento" value="" required="true"/>
+
+						<p:outputLabel value="Data de Nascimento" for="dtNascimento" />
+						<p:calendar id="dtNascimento" value="" 
+							pattern="dd/MM/yyyy" timeZone="America/Sao_Paulo" mask="true" />
+							
+						<p:outputLabel value="Sexo: " for="sexo" />
+						<p:inputText id="sexo" value="" />	
+					</p:panelGrid>
+				</p:fieldset>
+				<p:commandButton value="Gravar" action="" />
+			</h:form>	
+		</ui:define>
+	</ui:composition>
+</html>

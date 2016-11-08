@@ -18,6 +18,8 @@ import javax.persistence.TemporalType;
 @Table(name = "proprietario", catalog = "hackathon")
 public class Proprietario implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	private Integer cpfProprietario;
 	private String nome;
 	private String endereco;

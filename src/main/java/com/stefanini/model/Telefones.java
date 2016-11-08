@@ -15,6 +15,8 @@ import javax.persistence.Table;
 @Table(name = "telefones", catalog = "hackathon")
 public class Telefones implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	private TelefonesId id;
 	private int idTipoTelefone;
 

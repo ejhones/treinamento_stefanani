@@ -13,6 +13,8 @@ import javax.persistence.Table;
 @Table(name = "veiculos", catalog = "hackathon")
 public class Veiculos implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	private String placa;
 	private int cpfProprietario;
 	private int idModelo;

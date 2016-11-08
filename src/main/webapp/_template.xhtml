@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+	<h:head />
+	<h:body>
+		<div id="cabecalho">
+					
+			<p:growl id="messages" showDetail="true" autoUpdate="true" />
+			
+			<h:form>	
+				<p:megaMenu  style="margin-top:20px">
+				    <p:submenu label="Veículo">
+				        <p:column>
+				            <p:submenu label="Opções">
+				                <p:menuitem value="Gerenciar Veículos" action="#{agenteMB.chamar(0)}" url="/veiculos" />
+				                <p:menuitem value="Gerenciar Modelos" action="#{agenteMB.chamar(1)}" url="/modelos" />
+				            </p:submenu>
+				        </p:column>
+				    </p:submenu>
+				 
+				    <p:submenu label="Proprietários">
+						<p:column>
+				            <p:submenu label="Opções">
+				                <p:menuitem value="Gerenciar Proprietários" action="#{menuMB.chamar(2)}"/>
+				            </p:submenu>
+				        </p:column>
+				    </p:submenu>
+				 
+				    <p:submenu label="Infrações" >
+				        <p:column>
+				            <p:submenu label="Opções">
+				                <p:menuitem value="Gerenciar Infrações" action="#{agenteMB.chamar(3)}" url="/infracao" />
+				                <p:menuitem value="Gerenciar Agente" action="#{agenteMB.chamar(4)}" url="/tipoinfracao" />
+				            </p:submenu>
+				        </p:column>
+				    </p:submenu>
+				</p:megaMenu>
+			</h:form>
+			
+			<h1>
+				<ui:insert name="titulo"></ui:insert>
+			</h1>
+		</div>
+	
+		<div id="conteudo">
+			<ui:insert name="conteudo">
+			</ui:insert>
+		</div>
+	</h:body>
+
+</html>

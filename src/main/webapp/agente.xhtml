@@ -12,5 +12,23 @@
    		Data de admissão <p:calendar id="extended" value="#{agenteMB.agente.dtContratacao}" /><br />
    		Tempo de serviço: <h:outputLabel for="" value="#{agenteMB.agente.tempoServico}" />
     </h:form>
+    
+    <h:form>
+		<p:panel id="panel" header="Cadastro" style="margin-bottom:10px;">
+        <p:messages id="messages" />
+        <h:panelGrid columns="2" cellpadding="5">
+            <h:outputLabel for="name" value="Nome: " />
+            <p:inputText id="name" required="true" value="#{agenteMB.agente.nome}" />
+ 
+            <p:outputLabel for="extended" value="Data Contratação: " />
+            <p:calendar id="extended" value="#{agenteMB.agente.dtContratacao}" required="true"/>
+ 
+            <p:outputLabel for="number" value="Tempo de Serviço: " />
+            <p:spinner id="number" required="true" value="#{agenteMB.agente.tempoServico}"/>
+            
+        </h:panelGrid>
+    	</p:panel>
+ 		<p:commandButton value="Chamar" action="#{agenteMB.chamar()}"/>
+    </h:form>
 </h:body>
 </html>
